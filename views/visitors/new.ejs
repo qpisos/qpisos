@@ -1,6 +1,6 @@
 <!-- views/visitors/new.ejs -->
 <div class="container">
-
+ 
   <div class="row">
     <div class="col-sm-6 centered-form">
       <form action="/visitors" method="post">
@@ -16,7 +16,15 @@
           <label for="vistorPhone">Phone</label>
           <input type="text" name="visitorPhone" class="form-control">
         </div>
-
+        <div class="form-group">
+          <label for="vistorDate">Choose Date</label>
+          <input type="text" name="visitorDate" class="datepicker">
+        </div>
+        <div class="form-group">
+        <label for="vistorTime">Choose Time</label>
+        <input type="text" name="visitorTime" class="timepicker">
+      </div>
+        
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
@@ -24,26 +32,11 @@
 
               <h4>Email Confirmation</h4>
 
-          <p>Por ejemplo:<br>
-							<code class="green">
-							html = &lt;a href="" data-username="Dennis">Enlace</a><br>
-							Javascript = variables : {
-							username : 'data-username'
-							},
-							title : 'aquí se muestra al usuario {{username}}'</code><br>
-							Donde "username" será el nombre de la variable que utilizarás en la definición del título o del mensaje y "data-username" el nombre del atributo del cual será extraido el valor de la variable. Para este ejemplo se mostrará en el título "aquí se muestra al usuario <b>Dennis</b>".
-						</p>
-
-           
-           
-              <br> You are going to send an email asking for a visit/additional info about DireccionInmueble <br>
-              <br>
-              <strong>Datos vendedor:</strong><br> Nombre: {{visitorName}}<br>
-
-              <br>
-              <strong>Datos comprador:</strong><br> Nombre: {{visitorName}}<br> Teléfono: {{visi}}<br> Email:
-              {{visitorEmail}}<br>
-              <br> Un saludo<br>
+          
+              Hi,  <%= visitorName %>
+          
+            
+              <br> Best Regards<br>
               <br>
                
           </div>
@@ -53,18 +46,23 @@
         </div>
         
         <div class="row">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Agree to share my data
+          <button class="btn waves-effect waves-light" type="submit" name="action"  data-target="modal1" class="btn modal-trigger">Agree to share my data
             <i class="material-icons right">send</i>
           </button>
           <br>
           <br>
-          <button data-target="modal1" class="btn modal-trigger">       Ask for a visit<i class="material-icons right">phone</i></button>
+          <button id='getdata' data-target="modal1" class="btn modal-trigger">       Ask for a visit<i class="material-icons right">phone</i></button>
         </div>
       
       </form>
     </div>
+   
   </div>
-  
+  <% if(typeof newVisitor != 'undefined'){ %>
+    <pre><%= newVisitor %></pre>
+<% } else{ %>  
+    <p>NO VISITORS</p>
+<% } %>
 </div>
 
 <script type="text/javascript" src="/javascripts/main.js"></script>
