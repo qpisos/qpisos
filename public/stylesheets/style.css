@@ -16,7 +16,7 @@ body {
 
 
 .home-heading {
-  background-color: #E3ECFA;
+  background-color: #E3ECFA ;
   height: 75vh;
   padding: 0 30%;
   position: relative;
@@ -42,7 +42,7 @@ body {
 }
 
 .home-listing-box {
-  border: 1px solid #d3d3d3;
+  border: 1px solid #d3d3d3 ;
   height: 300px;
   margin: 30px 4%;
   padding: 0;
@@ -71,18 +71,18 @@ body {
 .listing-image {
   width: 160px;
   padding: 1px;
-  
+  align-content: center;
 }
 
 .listing-total {
   font-size: 1.9em;
-  color: #05AF3C;
+  color: #05AF3C ;
 }
 
 .light-text {
-  color: #626369;
+  color: #626369 ;
   font-size: 0.8em;
- 
+
 }
 
 .large-strong {
@@ -102,7 +102,7 @@ progress {
 }
 
 .backer-btn {
-  background-color: #25CB68;
+  background-color: #25CB68 ;
   border-radius: 3px;
   border: 1px solid black;
   color: white;
@@ -113,7 +113,11 @@ progress {
 
 .backer-btn:hover {
   color: white;
-  background-color: #05AF3C;
+  background-color: #05AF3C ;
+}
+
+.btn {
+  margin: 3px;
 }
 
 .listing-price {
@@ -144,7 +148,7 @@ color:red;
 
 }
 .title{
-  color: #f7931e;
+  color: #f7931e ;
 }
 .table {
 font-size: 12px
@@ -153,4 +157,9 @@ font-size: 12px
   padding: 0px;
   font-size: 18px;
   text-align: center;
+}
+
+.main-img {
+  height: 170%;
+  width: 170%;
 }

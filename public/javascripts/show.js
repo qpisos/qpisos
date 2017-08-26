@@ -23,7 +23,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
         console.log('error');
       }
     });
-    
+
     let marker = [];
     printCompetition.forEach(function (competition) {
       let title = listing.title
@@ -40,5 +40,4 @@ $(".button-collapse").sideNav();
 $('select').material_select();
 $(".dropdown-button").dropdown();
 $('.carousel').carousel();
-  
-     
+$('.carousel.carousel-slider').carousel({fullWidth: true});

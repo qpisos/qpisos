@@ -17,7 +17,7 @@ router.get('/new', ensureLoggedIn('/login'), (req, res) => {
   res.render('listings/new', { home_type: constants.home_type });
 });
 
-router.post('/', ensureLoggedIn('/login'), upload.array('image', 5), (req, res, next) => {
+router.post('/', ensureLoggedIn('/login'), upload.array('image', 9), (req, res, next) => {
   console.log(req.body);
   const tasks = req.files.map(image => uploadToCloudinary(image.path));
 
