@@ -116,4 +116,12 @@ router.post('/:id',
   });
 });
 
+router.post('/:id/delete', (req, res, next) => {
+  
+      Listing.findByIdAndRemove(req.params.id, (err, product) => {
+      if (err){ return next(err); }
+      return res.redirect('/');
+    });
+  });
+
 module.exports = router;
